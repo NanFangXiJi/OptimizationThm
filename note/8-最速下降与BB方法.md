@@ -14,13 +14,13 @@
 
 # 两点步长法(BB法)
 
-步长采用上一步的最佳步长。$$\alpha_k=\frac{s_{k-1}y_{k-1}}{\Vert y_{k-1}\Vert^2}\text{或}\frac{\Vert s_{k-1}\Vert^2}{s_{k-1}y_{k-1}} $$，其中$$s_{k-1}=x_k-x_{k-1},\quad y_{k-1}=\nabla f(x_{k-1})-\nabla f(x_k) $$
+白敏茹的观点是，步长采用上一步的最佳步长。$$\alpha_k=\frac{s_{k-1}^Ty_{k-1}}{\Vert y_{k-1}\Vert^2}\text{或}\frac{\Vert s_{k-1}\Vert^2}{s_{k-1}^Ty_{k-1}} $$，其中$$s_{k-1}=x_k-x_{k-1},\quad y_{k-1}=\nabla f(x_{k-1})-\nabla f(x_k) $$
 
-其实，还可以看作是，BB步长$\alpha_k\approx\nabla^2 f(x_{k-1})^{-1}$，这样事实上就和拟牛顿法联系起来了。
+其实，还可以看作是，BB步长$\alpha_kE\approx\nabla^2 f(x_{k-1})^{-1}$，这样事实上就和拟牛顿法联系起来了。
 
 ## 收敛速度
 
-有超线性收敛。
+有超线性收敛。但是似乎这种说法不够准确，应该是有条件。PPT上面没有。
 
 
 
